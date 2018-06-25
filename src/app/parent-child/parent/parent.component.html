@@ -1,0 +1,6 @@
+<p>
+  parent works! I am {{myname}}
+</p>
+<input type="text" [(ngModel)]="parentName"> {{parentName}}
+
+<app-child [parentName]="parentName"></app-child>

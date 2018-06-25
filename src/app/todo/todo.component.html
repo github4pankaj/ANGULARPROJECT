@@ -1,0 +1,25 @@
+<p>
+  todo works!
+</p>
+{{task[0]}}<br>
+{{task[1]}}<br>
+{{task[2]}}
+
+<ol>
+
+<li>{{task[0]}}</li>
+<li>{{task[1]}}</li>
+<li>{{task[2]}}</li>
+</ol>
+
+Add Task: <input type="task" [(ngModel)]="onetask"/>
+<button (click)="addTask()">Add Task</button>
+<ol>
+  <li *ngFor="let mytask of task; let currentTask=index">
+    Task {{currentTask}}:{{mytask | uppercase}} <button (click)="deleteTask(currentTask)"> delete</button>
+  </li>
+</ol>
+Money: {{money/100 | percent:'2.0'}}<br>
+Date : {{myDate | date:'MMMM d, y, h:mm:ss a z'}}<br>
+
+Sorted Numbers are : {{scores | sort:'asc'}} 

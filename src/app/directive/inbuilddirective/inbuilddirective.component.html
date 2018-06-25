@@ -1,0 +1,30 @@
+<p>
+  inbuilddirective works!
+</p>
+<div>
+  <div *ngIf="friends.length > 0 then somefriends else noFriend"></div>
+  <ng-template #somefrinds>
+  List of Friends:
+    <br>
+    <ul *ngFor="let data of friends;let counter=index">
+      <li>
+        {{counter}}: {{data}}
+      </li>
+    </ul>
+    
+  </ng-template>
+  <!--<div *ngIf="friends.length == 0">No Friends
+    
+  </div>-->
+  <ng-template #noFriend>
+    No Friends Dear
+  </ng-template>
+</div>
+<div>
+  <h4>Switch Case:</h4>
+  <div [ngSwitch]="name">
+    <div *ngSwitchCase="'Pankaj'"> pankaj here </div>
+    <div *ngSwitchCase="'Amit'"> Amit here </div>
+    <div *ngSwitchDefault> I am every where </div>
+  </div>
+</div>

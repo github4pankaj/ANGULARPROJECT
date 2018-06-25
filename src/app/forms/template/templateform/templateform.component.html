@@ -1,0 +1,15 @@
+<p>
+  templateform works!
+</p>
+<form #hobbyForm="ngForm" (ngSubmit)="submitUserHobby(hobbyForm.value)">
+  First Name : <input type="text" name="FirstName" ngModel><br>
+  Last Name : <input type="text" name="LastName" ngModel><br>
+  Hobby : 
+  <select name="hobby" ngModel>
+    <option value="dancing">Dancing</option>
+    <option value="Driving">Driving</option>
+    <option value="Gliding">Gliding</option>
+  </select>
+<br>
+<input type="submit" value="Submit">
+</form>
